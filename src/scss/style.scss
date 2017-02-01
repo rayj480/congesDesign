@@ -61,6 +61,7 @@
 html, body, .main{
     display: block;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .jc-app-bar{
@@ -124,7 +125,21 @@ html, body, .main{
     background-color: whitesmoke;
 
     .jc-content{
-        
+
+        padding: 15px;
+
+        .jc-content-box{
+            border-radius: 5px;
+            border: 1px dotted grey;
+            border-top: 3px solid #3c8dbc;
+            padding: 0; 
+            margin-bottom: 15px;
+
+            h3{
+                margin: 0; 
+                padding: 0;
+            }
+        }
     }
 
     .jc-features {
@@ -140,7 +155,7 @@ html, body, .main{
             li{
                 padding-left: 10px;
                 line-height: 40px;
-                transition: padding-left 0.5s;
+                transition: background-color 0.5s, padding-left 0.5s;
             }
 
             :hover{
