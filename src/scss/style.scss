@@ -59,37 +59,94 @@
 /* Custom */ 
 
 html, body, .main{
+    display: block;
     height: 100%;
 }
 
 .jc-app-bar{
 
-    height: 30px;
-    background-color: red;
+    height: 50px;
+    background-color: #3c8dbc;
 
     .jc-title {
+        background-color: #357ca5;
+        height: 100%;
         h3  {
             margin: 0; 
-            padding : 0
+            padding : 0;
+            text-align: center;
+            padding-top: 10px;
+            color: papayawhip;
+        }
+    }
+
+    .jc-tools{
+        text-align: center;
+        height: 100%;
+        padding-top: 13px;
+
+        input.search{
+            border-radius: 6px;
         }
     }
 }
 
-.jc-menu{
-    height: 30px; 
-    background-color: darkgrey; 
-    color: white;
+
+.jc-menu-container{
+    background-color: darkslategrey; 
+
+    .jc-menu{
+        height: 30px; 
+        background-color: darkslategrey; 
+        color: white;
+
+        ul{
+            text-align: center; 
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            align-items: center;
+            line-height: 30px;
+            color: papayawhip;
+            text-transform: uppercase;
+
+            li{
+                margin: 0 5px;
+            }
+        }
+    }
 }
 
 
 .jc-workspace{
+    position: relative;
     height: 100%;
-    background-color: yellow;
+    background-color: whitesmoke;
+
+    .jc-content{
+        
+    }
 
     .jc-features {
+        background-color: darkslategrey; 
+        height: 100%;
+        color: papayawhip;
+        padding: 0;
+        
         ul {
             margin : 0;
-            padding : 0
+            padding : 0;
+
+            li{
+                padding-left: 10px;
+                line-height: 40px;
+                transition: padding-left 0.5s;
+            }
+
+            :hover{
+                background-color: darkgrey;
+                padding-left: 20px;
+            }
         }
     }
 }
