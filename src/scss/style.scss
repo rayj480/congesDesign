@@ -140,14 +140,12 @@ html, body, .main{
 
 .jc-workspace{
     position: relative;
-    height: 100%;
     background-color: whitesmoke;
 
     #jc-search-content{
         display: none;
         position: absolute;
         height: 100%;
-        width: 100%;
         z-index: 99;
         background-color: white;
     }
@@ -165,6 +163,91 @@ html, body, .main{
             border-top: 3px solid #3c8dbc;
             padding: 0; 
             margin-bottom: 15px;
+
+            .jc-rss-feed{
+                margin-top: 20px;
+                ul{
+                    display: block;
+                    li{
+                        a{
+                            display: block; 
+                            border-left: 3px solid darkred;
+                            div{
+                                padding-left: 30px;
+                                h6{
+                                    padding: 0; 
+                                    margin: 0;
+                                    text-transform: uppercase;
+                                }   
+                                p{
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .jc-actus{
+                height: 300px;
+                overflow: hidden;
+                margin: 0;
+                .jc-actus-main{
+                    .img{
+                        padding: 0;
+                        height: 300px;
+                        overflow: hidden;
+                    }
+
+                    
+                    .jc-actus-text{
+                        background-color: white;
+                        text-align: justify;
+                        h4{
+
+                        }
+                        p{
+
+                        }
+                        .actions-summary{
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+                .jc-actus-list{
+                    background-color: white;
+                    height: 100%;
+                    padding: 0;
+                    ul{
+                        padding: 0; 
+                        margin: 0;
+                        flex-direction: column;
+                        li{
+                            flex-grow: 1;
+                            a{
+                                padding: 10px 0;
+                                display: block;
+                                text-decoration: none;
+                                .jc-actus-one{
+                                    text-align: center;
+                                    h6{
+                                        padding: 0; 
+                                        margin: 0;
+                                    }
+                                }
+
+                                &:hover{
+                                    background-color: white;
+                                    color: black;
+                                    border-bottom: 2px solid darkred;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
 
             .actions-summary{
                 ul{
@@ -332,7 +415,6 @@ html, body, .main{
 
     .jc-features {
         background-color: darkslategrey; 
-        height: 100%;
         color: papayawhip;
         padding: 0;
         

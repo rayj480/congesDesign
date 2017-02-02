@@ -3863,13 +3863,11 @@ html, body, .main {
 
 .jc-workspace {
   position: relative;
-  height: 100%;
   background-color: whitesmoke; }
   .jc-workspace #jc-search-content {
     display: none;
     position: absolute;
     height: 100%;
-    width: 100%;
     z-index: 99;
     background-color: white; }
   .jc-workspace #jc-search-content:target {
@@ -3882,6 +3880,58 @@ html, body, .main {
       border-top: 3px solid #3c8dbc;
       padding: 0;
       margin-bottom: 15px; }
+      .jc-workspace .jc-content .jc-content-box .jc-rss-feed {
+        margin-top: 20px; }
+        .jc-workspace .jc-content .jc-content-box .jc-rss-feed ul {
+          display: block; }
+          .jc-workspace .jc-content .jc-content-box .jc-rss-feed ul li a {
+            display: block;
+            border-left: 3px solid darkred; }
+            .jc-workspace .jc-content .jc-content-box .jc-rss-feed ul li a div {
+              padding-left: 30px; }
+              .jc-workspace .jc-content .jc-content-box .jc-rss-feed ul li a div h6 {
+                padding: 0;
+                margin: 0;
+                text-transform: uppercase; }
+              .jc-workspace .jc-content .jc-content-box .jc-rss-feed ul li a div p {
+                color: black; }
+      .jc-workspace .jc-content .jc-content-box .jc-actus {
+        height: 300px;
+        overflow: hidden;
+        margin: 0; }
+        .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-main .img {
+          padding: 0;
+          height: 300px;
+          overflow: hidden; }
+        .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-main .jc-actus-text {
+          background-color: white;
+          text-align: justify; }
+          .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-main .jc-actus-text .actions-summary {
+            position: absolute;
+            bottom: 0; }
+        .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list {
+          background-color: white;
+          height: 100%;
+          padding: 0; }
+          .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list ul {
+            padding: 0;
+            margin: 0;
+            flex-direction: column; }
+            .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list ul li {
+              flex-grow: 1; }
+              .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list ul li a {
+                padding: 10px 0;
+                display: block;
+                text-decoration: none; }
+                .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list ul li a .jc-actus-one {
+                  text-align: center; }
+                  .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list ul li a .jc-actus-one h6 {
+                    padding: 0;
+                    margin: 0; }
+                .jc-workspace .jc-content .jc-content-box .jc-actus .jc-actus-list ul li a:hover {
+                  background-color: white;
+                  color: black;
+                  border-bottom: 2px solid darkred; }
       .jc-workspace .jc-content .jc-content-box .actions-summary ul {
         justify-content: flex-end;
         padding-right: 10px; }
@@ -3978,7 +4028,6 @@ html, body, .main {
               transform: scale(1); }
   .jc-workspace .jc-features {
     background-color: darkslategrey;
-    height: 100%;
     color: papayawhip;
     padding: 0; }
     .jc-workspace .jc-features ul {
