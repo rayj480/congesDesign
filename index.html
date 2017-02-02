@@ -6,21 +6,32 @@
     <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 <body>
-    <div class="container-fluid main">
+    <div id="jc-root" class="container-fluid main">
         <div class="row jc-app-bar">
             <div class="col-md-2 jc-title">
                 <h3>Titre</h3>
             </div>
             <div class="col-md-10 jc-tools">
-                <input placeholder="Rechercher..." class="search" type="text">
+                <a href="#jc-search-content">Rechercher</a>
             </div>
         </div>
         <div class="row jc-menu-container">
             <div class="col-md-10 jc-menu col-md-offset-2">
                 <ul class="list-unstyled">
-                    <li>Commercial</li>
-                    <li>Administratif</li>
-                    <li>Infogérance</li>
+                    <li>
+                        <div>
+                            <a href="#">Commercial</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">Administratif</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">Infogérance</a>
+                        </div></li>
                 </ul>
             </div>
         </div>
@@ -32,101 +43,452 @@
                     <li>Tâches</li>
                 </ul>
             </div>
+            <div class="col-md-10 col-md-offset-2" id="jc-search-content">
+                <div class="actions">
+                    <a href="#jc-root">X</a>
+                </div>
+            </div>
             <div class="col-md-10 jc-content">
                 <div class="row">
-                    <div class="col-md-6 jc-content-box">
-                        <h3>Documents favoris</h3>
+                    <div class="col-md-6">
+                        <div class="jc-content-box">
+                            <h3>Documents favoris</h3>
+                            <div class="actions-summary">
+                                <ul>
+                                    <li><a href="#">Plus</a></li>
+                                </ul>
+                            </div>
+                            <p>
+                                <ul class="jc-lst-doc">
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="jc-content-box">
+                            <h3>Groupes de travail</h3>
+                            <div class="actions-summary">
+                                <ul>
+                                    <li><a href="#">Plus</a></li>
+                                    <li><a href="#">Parcourir</a></li>
+                                </ul>
+                            </div>
+                            <p>
+                                <ul class="jc-lst-group">
+                                    <li>
+                                        <div class="jc-group">
+                                            <div class="jc-group-title">
+                                                <h6>Groupe 1</h6>
+                                            </div>
+                                            <div class="jc-group-actions">
+                                                <a href="#">Voir</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-group">
+                                            <div class="jc-group-title">
+                                                <h6>Groupe 3</h6>
+                                            </div>
+                                            <div class="jc-group-actions">
+                                                <a href="#">Voir</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-group">
+                                            <div class="jc-group-title">
+                                                <h6>Groupe 2</h6>
+                                            </div>
+                                            <div class="jc-group-actions">
+                                                <a href="#">Voir</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-group">
+                                            <div class="jc-group-title">
+                                                <h6>Groupe 4</h6>
+                                            </div>
+                                            <div class="jc-group-actions">
+                                                <a href="#">Voir</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="jc-content-box">
+                            <h3>Documents modifiés</h3>
+                            <div class="actions-summary">
+                                <ul>
+                                    <li><a href="#">Plus</a></li>
+                                </ul>
+                            </div>
+                            <p>
+                                <ul class="jc-lst-doc">
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jc-document-ligth">
+                                            <h5>Document 1.doc</h5>
+                                            <div class="jc-desc">
+                                                <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Création: <strong>10/10/2017</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié par: <strong>CARI Jonathan</strong></span>
+                                            </div>
+                                            <div class="jc-desc">
+                                                <span>Modifié le: <strong>10/10/2017</strong></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 jc-content-box link-box">
+                        <h3>Mes liens perso</h3>
+                        <div class="actions-summary">
+                            <ul>
+                                <li><a href="#">Plus</a></li>
+                            </ul>
+                        </div>
                         <p>
                             <ul>
                                 <li>
-                                    <div class="jc-document-ligth">
-                                        <h5>Document 1.doc</h5>
-                                        <div class="jc-desc">
-                                            <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
                                         </div>
-                                        <div class="jc-desc">
-                                            <span>Création: <strong>10/10/2017</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié par: <strong>CARI Jonathan</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié le: <strong>10/10/2017</strong></span>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="jc-document-ligth">
-                                        <h5>Document 1.doc</h5>
-                                        <div class="jc-desc">
-                                            <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
                                         </div>
-                                        <div class="jc-desc">
-                                            <span>Création: <strong>10/10/2017</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié par: <strong>CARI Jonathan</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié le: <strong>10/10/2017</strong></span>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="jc-document-ligth">
-                                        <h5>Document 1.doc</h5>
-                                        <div class="jc-desc">
-                                            <span>Auteur: <strong>CARI Jonathan</strong></span>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
                                         </div>
-                                        <div class="jc-desc">
-                                            <span>Création: <strong>10/10/2017</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié par: <strong>CARI Jonathan</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié le: <strong>10/10/2017</strong></span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="jc-document-ligth">
-                                        <h5>Document 1.doc</h5>
-                                        <div class="jc-desc">
-                                            <span>Auteur: <strong>CARI Jonathan</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Création: <strong>10/10/2017</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié par: <strong>CARI Jonathan</strong></span>
-                                        </div>
-                                        <div class="jc-desc">
-                                            <span>Modifié le: <strong>10/10/2017</strong></span>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </li>
                             </ul>
                         </p>
+                        
                     </div>
-                    <div class="col-md-6 jc-content-box">
-                        <h3>Groupes de travail</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 jc-content-box">
-                        <h3>Documents modifiés</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 jc-content-box">
-                        <h3>Mes liens perso</h3>
-                    </div>
-                    <div class="col-md-4 jc-content-box">
+                    <div class="col-md-4 jc-content-box link-box">
                         <h3>Liens activité</h3>
+                        <div class="actions-summary">
+                            <ul>
+                                <li><a href="#">Plus</a></li>
+                            </ul>
+                        </div>
+                        <p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+                        
                     </div>
-                    <div class="col-md-4 jc-content-box">
+                    <div class="col-md-4 jc-content-box link-box">
                         <h3>Liens Tryade</h3>
+                        <div class="actions-summary">
+                            <ul>
+                                <li><a href="#">Plus</a></li>
+                            </ul>
+                        </div>
+                        <p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="jc-group-link">
+                                            <div class="jc-link-img">
+                                                <img src="dist/img/web-link.png" alt="">
+                                            </div>
+                                            <div class="jc-link-title">
+                                                <span>Lien 1</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </p>
+                        
                     </div>
                 </div>
             </div>

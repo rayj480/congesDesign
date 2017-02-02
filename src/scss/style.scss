@@ -64,6 +64,12 @@ html, body, .main{
     box-sizing: border-box;
 }
 
+#jc-root:target{
+    #jc-search-content{
+        display: none;
+    }
+}
+
 .jc-app-bar{
 
     height: 50px;
@@ -86,8 +92,8 @@ html, body, .main{
         height: 100%;
         padding-top: 13px;
 
-        input.search{
-            border-radius: 6px;
+        a{
+            color: white;
         }
     }
 }
@@ -113,6 +119,19 @@ html, body, .main{
 
             li{
                 margin: 0 5px;
+
+                a{           
+                    display: block;
+                    color: papayawhip;
+                    text-decoration: none;
+                    padding-top: 2px;
+                    transition: border-top 0.5s;
+
+                    &:hover{
+                        padding-top: 0px;
+                        border-top: 2px solid #B26100;
+                    }
+                }
             }
         }
     }
@@ -124,31 +143,65 @@ html, body, .main{
     height: 100%;
     background-color: whitesmoke;
 
+    #jc-search-content{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        background-color: white;
+    }
+
+    #jc-search-content:target{
+        display: block;
+    }
+
     .jc-content{
 
         padding: 15px;
-
         .jc-content-box{
-            border-radius: 5px;
-            border: 1px dotted grey;
+            border-radius: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.22);
             border-top: 3px solid #3c8dbc;
             padding: 0; 
             margin-bottom: 15px;
+
+            .actions-summary{
+                ul{
+                    justify-content: flex-end;
+                    padding-right: 10px;
+                    li{
+                        margin: 0 5px;
+                        a{
+                            text-decoration: none; 
+                            padding: 5px;
+                            background-color: darkred;
+                            border-radius: 2px; 
+                            color: papayawhip; 
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
 
             h3{
                 margin: 0; 
                 padding: 0;
             }
 
-            ul {
-                list-style: none;
+            ul{
                 padding: 0;
+                list-style: none;
                 display: flex; 
                 flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            ul.jc-lst-doc {
                 li{
                     box-sizing: border-box;
                     border-left: 3px solid darkred;
-                    border-radius: 5px;
+                    border-radius: 2px;
                     margin: 3px 5px;
                     padding-left: 5px;
                     .jc-document-ligth{
@@ -161,10 +214,117 @@ html, body, .main{
                             font-size: 9px;
                         }
                     }
+                }
+            }
 
-                    .jc-desc{
+            ul.jc-lst-group{
+                
+                li{
+                    margin: 0 10px;
+
+                    div.jc-group{
+                        width: 100px;
+                        border: 1px solid rgba(0, 0, 0, 0.22);
+                        border-radius: 2px;
                         
+                        div.jc-group-title{
+                            h6{
+                                padding-top: 5px;
+                                text-align: center;
+                            }
+                        }
+                        div.jc-group-actions{
+                            border-top: 3px solid darkred;
+                            text-align: center;
+
+                            a{
+                                display: inline-block;
+                                text-decoration: none;
+                                background-color: darkred;
+                                color: papayawhip;
+                                padding: 0 5px;
+                                width: 40px;
+                                transition: width 0.2s, margin 0.2s, padding 0.2s;
+                                margin: 6px 0;
+                                font-weight: bold;
+                                border-radius: 2px;
+
+                                &:hover{
+                                    width: 100%;
+                                    margin: 0 0;
+                                    padding: 6px 0;
+                                    border-radius: 0px;
+                                }
+                            }
+                            
+                        }
                     }
+                }
+            }
+        }
+
+        
+        .link-box{
+            background-color:  #B26100;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            border-right: none;
+            border-left: none;
+            border-radius: 0px;
+
+            h3{
+                color: papayawhip;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            ul{
+                li{
+                    margin: 0 20px;
+                    text-align: center;
+
+                    a{
+                        text-decoration: none;
+                        color: #222D32;
+                        display:block;
+                        transition: background-color 0.5s;
+                        border-radius: 5px;
+                        padding: 10px;
+
+                        .jc-group-link{
+                            .jc-link-img{
+                                box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.22);
+                                overflow: hidden;
+                                border-radius: 30px;
+                                background-color: white;;
+
+                                img{
+                                    transform: scale(0.5);
+                                    transition: transform 0.5s;
+                                }
+                            }
+
+                            .jc-link-title{
+                                margin-top: 10px;
+                            }
+                        }
+
+                        &:hover{
+                            background-color: #FF8700;
+                            
+                            .jc-group-link{
+                                .jc-link-img{
+
+                                    img{
+                                        transform: scale(1);
+                                    }
+                                }
+                            
+                            }
+                    }
+
+                    
+                    }
+
                 }
             }
         }
