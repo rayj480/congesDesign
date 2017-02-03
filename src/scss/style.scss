@@ -141,6 +141,7 @@ html, body, .main{
 .jc-workspace{
     position: relative;
     background-color: whitesmoke;
+    display: flex;
 
     #jc-search-content{
         display: none;

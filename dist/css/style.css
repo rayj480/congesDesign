@@ -3863,7 +3863,8 @@ html, body, .main {
 
 .jc-workspace {
   position: relative;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  display: flex; }
   .jc-workspace #jc-search-content {
     display: none;
     position: absolute;
