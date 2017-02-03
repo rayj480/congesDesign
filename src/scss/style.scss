@@ -84,6 +84,16 @@ html, body, .main{
             text-align: center;
             padding-top: 10px;
             color: papayawhip;
+
+            a{
+                color: papayawhip; 
+                text-decoration: none; 
+
+                &:visited{
+                    color: papayawhip; 
+                    text-decoration: none; 
+                }
+            }
         }
     }
 
@@ -94,6 +104,15 @@ html, body, .main{
 
         a{
             color: white;
+        }
+
+        &>span>div {
+            display: inline-block;
+            min-width: auto;
+        }
+
+        #SearchBox{
+            background-color: white;
         }
     }
 }
@@ -157,7 +176,7 @@ html, body, .main{
 
     .jc-content{
 
-        padding: 15px;
+        padding-top: 15px;
         .jc-content-box{
             border-radius: 2px;
             border: 1px solid rgba(0, 0, 0, 0.22);
