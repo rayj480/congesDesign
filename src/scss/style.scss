@@ -9,9 +9,9 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
@@ -20,7 +20,7 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
 // Components
 // @import "bootstrap/component-animations";
@@ -47,9 +47,9 @@
 
 // Components w/ JavaScript
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
 
 // Utility classes
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
@@ -192,14 +192,14 @@ html, body, .main{
                 margin: 0; 
             }
 
-            .jc-rss-feed{
-                margin-top: 20px;
-                ul{
+            
+                .slm-layout-main{
                     display: block;
-                    li{
+                    .link-item{
+                        border-left: 3px solid darkred;
+                        margin: 5px 0;
                         a{
                             display: block; 
-                            border-left: 3px solid darkred;
                             div{
                                 padding-left: 30px;
                                 h6{
@@ -213,7 +213,7 @@ html, body, .main{
                             }
                         }
                     }
-                }
+                
             }
 
             .jc-actus{
@@ -225,12 +225,14 @@ html, body, .main{
                         padding: 0;
                         height: 300px;
                         overflow: hidden;
+                        max-width: 300px;
                     }
 
                     
                     .jc-actus-text{
                         background-color: white;
                         text-align: justify;
+                        height: 300px;
                         h4{
 
                         }
@@ -251,17 +253,26 @@ html, body, .main{
                         padding: 0; 
                         margin: 0;
                         flex-direction: column;
+                        height: 100%;
+                        display: block;
+                        position:relative;
                         li{
-                            flex-grow: 1;
+                            display: block;
+                            width: 100%;
+                            height: 50%;
                             a{
                                 padding: 10px 0;
-                                display: block;
+                                display: flex;
                                 text-decoration: none;
                                 .jc-actus-one{
                                     text-align: center;
                                     h6{
                                         padding: 0; 
                                         margin: 0;
+                                        color: royalblue;
+                                        font-weight: bold;
+                                        margin-left: 20px;
+                                        margin-top: 10px;
                                     }
                                 }
 
@@ -270,6 +281,11 @@ html, body, .main{
                                     color: black;
                                     border-bottom: 2px solid darkred;
                                 }
+                            }
+
+                            
+                            a.selected{
+                                border-bottom: 2px solid royalblue;
                             }
                         }
                     }
@@ -392,6 +408,10 @@ html, body, .main{
                 padding: 0;
             }
 
+            .p-correction{
+                line-height: inherit;
+            }
+
             ul{
                 li{
                     margin: 0 20px;
@@ -476,4 +496,31 @@ html, body, .main{
 
         }
     }
+}
+
+@media screen and (max-width: 1000px)
+{
+
+    .jc-workspace .jc-features{
+        width: 80px;
+    }
+
+    .jc-workspace .jc-features ul li{
+        margin: 10px auto;
+    }
+
+    .jc-workspace .jc-features ul li a{
+        visibility: hidden;
+    }
+
+    .jc-workspace .jc-features ul li a:first-letter {
+        visibility: visible;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 5px 10px;
+        transition: none;
+        /* margin: 5px; */
+    }
+
 }
