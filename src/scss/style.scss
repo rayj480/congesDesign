@@ -64,6 +64,10 @@ html, body, .main{
     box-sizing: border-box;
 }
 
+.ms-srch-sb>input {
+    width: 150px;
+}
+
 #jc-root:target{
     #jc-search-content{
         display: none;
@@ -73,34 +77,34 @@ html, body, .main{
 .jc-app-bar{
 
     height: 50px;
-    background-color: #3c8dbc;
+    background-color: white;
 
     .jc-title {
-        background-color: #357ca5;
         height: 100%;
-        h3  {
-            margin: 0; 
-            padding : 0;
-            text-align: center;
-            padding-top: 10px;
-            color: papayawhip;
+        background-color: transparent;
+        margin: 0; 
+        padding : 0;
+        color: whitesmoke;
 
-            a{
-                color: papayawhip; 
+        a{
+            color: black; 
+            text-decoration: none; 
+            margin-left: 20px;
+
+            &:visited{
+                color: black; 
                 text-decoration: none; 
-
-                &:visited{
-                    color: papayawhip; 
-                    text-decoration: none; 
-                }
             }
         }
+
+        &>*{
+            display:inline-block;
+        }
+        
     }
 
     .jc-tools{
-        text-align: center;
         height: 100%;
-        padding-top: 13px;
 
         a{
             color: white;
@@ -113,18 +117,20 @@ html, body, .main{
 
         #SearchBox{
             background-color: white;
+            text-align: center;
         }
+
     }
 }
 
 
 .jc-menu-container{
-    background-color: darkslategrey; 
-
+    border-top: 2px solid black;
+    /* [ReplaceColor(themeColor:"RowAccent")] */border-top-color: black;
+    background-color: whitesmoke;
     .jc-menu{
         height: 30px; 
-        background-color: darkslategrey; 
-        color: white;
+        color: dimgray;
 
         ul{
             text-align: center; 
@@ -133,7 +139,7 @@ html, body, .main{
             justify-content: center;
             align-items: center;
             line-height: 30px;
-            color: papayawhip;
+            color: dimgray;
             text-transform: uppercase;
 
             li{
@@ -141,14 +147,16 @@ html, body, .main{
 
                 a{           
                     display: block;
-                    color: papayawhip;
+                    color: #333;
                     text-decoration: none;
                     padding-top: 2px;
                     transition: border-top 0.5s;
+                    font-weight: 500;
+                    font-family:"Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
 
                     &:hover{
                         padding-top: 0px;
-                        border-top: 2px solid #B26100;
+                        border-top: 2px solid grey;
                     }
                 }
             }
@@ -162,7 +170,6 @@ html, body, .main{
 
 .jc-workspace{
     position: relative;
-    background-color: whitesmoke;
     display: flex;
     min-height: 100%;
 
@@ -184,7 +191,8 @@ html, body, .main{
         .jc-content-box{
             border-radius: 2px;
             border: 1px solid rgba(0, 0, 0, 0.22);
-            border-top: 3px solid #3c8dbc;
+            border-top: 3px solid #333;
+            /* [ReplaceColor(themeColor:"RowAccent")] */border-top-color: #333;
             padding: 0; 
             margin-bottom: 15px;
 
@@ -196,7 +204,7 @@ html, body, .main{
                 .slm-layout-main{
                     display: block;
                     .link-item{
-                        border-left: 3px solid darkred;
+                        border-left: 3px solid #333;
                         margin: 5px 0;
                         a{
                             display: block; 
@@ -269,7 +277,7 @@ html, body, .main{
                                     h6{
                                         padding: 0; 
                                         margin: 0;
-                                        color: royalblue;
+                                        /* [ReplaceColor(themeColor:"RowAccent")] */color: royalblue;
                                         font-weight: bold;
                                         margin-left: 20px;
                                         margin-top: 10px;
@@ -279,13 +287,14 @@ html, body, .main{
                                 &:hover{
                                     background-color: white;
                                     color: black;
-                                    border-bottom: 2px solid darkred;
+                                    /* [ReplaceColor(themeColor:"RowAccent")] */border-bottom: 2px solid darkred;
                                 }
                             }
 
                             
                             a.selected{
                                 border-bottom: 2px solid royalblue;
+                                /* [ReplaceColor(themeColor:"RowAccent")] */border-bottom-color: royalblue;
                             }
                         }
                     }
@@ -302,9 +311,8 @@ html, body, .main{
                         a{
                             text-decoration: none; 
                             padding: 5px;
-                            background-color: darkred;
-                            border-radius: 2px; 
-                            color: papayawhip; 
+                            /* [ReplaceColor(themeColor:"ButtonText")] */background-color: #333;
+                            color: whitesmoke; 
                             font-weight: bold;
                         }
                     }
@@ -327,7 +335,7 @@ html, body, .main{
             ul.jc-lst-doc {
                 li{
                     box-sizing: border-box;
-                    border-left: 3px solid darkred;
+                    border-left: 3px solid gray;
                     border-radius: 2px;
                     margin: 3px 5px;
                     padding-left: 5px;
@@ -364,20 +372,20 @@ html, body, .main{
                             }
                         }
                         div.jc-group-actions{
-                            border-top: 3px solid darkred;
+                            border-top: 3px solid gray;
+                            /* [ReplaceColor(themeColor:"RowAccent")] */border-top-color: gray;
                             text-align: center;
 
                             a{
                                 display: inline-block;
                                 text-decoration: none;
-                                background-color: darkred;
-                                color: papayawhip;
+                                /* [ReplaceColor(themeColor:"ButtonText")] */background-color: #333;
+                                color: whitesmoke;
                                 padding: 0 5px;
                                 width: 40px;
                                 transition: width 0.2s, margin 0.2s, padding 0.2s;
                                 margin: 6px 0;
                                 font-weight: bold;
-                                border-radius: 2px;
 
                                 &:hover{
                                     width: 100%;
@@ -395,7 +403,7 @@ html, body, .main{
 
         
         .link-box{
-            background-color:  #B26100;
+            /* [ReplaceColor(themeColor:"NavigationAccent")] */background-color:  gray;
             border: 1px solid rgba(0, 0, 0, 0.22);
             border-right: none;
             border-left: none;
@@ -444,8 +452,7 @@ html, body, .main{
                         }
 
                         &:hover{
-                            background-color: #FF8700;
-                            
+                            background-color: whitesmoke;
                             .jc-group-link{
                                 .jc-link-img{
 
@@ -466,9 +473,10 @@ html, body, .main{
     }
 
     .jc-features {
-        background-color: darkslategrey; 
-        color: papayawhip;
+        background-color: white; 
+        color: dimgray;
         padding: 0;
+        border-right: 2px solid whitesmoke;
         
         ul {
             margin : 0;
@@ -483,7 +491,7 @@ html, body, .main{
                     display: block;
                     width: 100%;
                     height: 100%;
-                    color: papayawhip;
+                    color: dimgray;
                     transition: background-color 0.5s, padding-left 0.5s;
 
                     
@@ -511,14 +519,18 @@ html, body, .main{
 
     .jc-workspace .jc-features ul li a{
         visibility: hidden;
+        &:hover{
+            padding-left: 10px;
+        }
     }
 
     .jc-workspace .jc-features ul li a:first-letter {
         visibility: visible;
         font-size: 20px;
-        background-color: rgba(255, 255, 255, 0.2);
+        /* [ReplaceColor(themeColor:"Navigation")] */background-color: gray;
         padding: 10px 20px;
         border-radius: 5px 10px;
+        color: white;
         transition: none;
         /* margin: 5px; */
     }
