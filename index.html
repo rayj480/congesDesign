@@ -6,6 +6,136 @@
     <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 <body>
-    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 conges-header">
+                <!-- header -->
+                <h1>Gestion de congés</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 conges-menu">
+                <!-- menu -->
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Calendrier</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 conges-body">
+                <!-- body -->
+                <div class="row recap-container">
+                    <!-- recap congés -->
+                    <div class="col-md-4">
+                        <!-- jours restants --> 
+                        <div class="jours-restants">
+                            <span class="jours-restants-nombre">10</span>
+                            <div><span>Jours restants</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Maladie -->
+                        <div class="jours-maladie">
+                            <span class="jours-maladie-nombre">10</span>
+                            <div><span>Jours maladie</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Cumul -->
+                        <div class="jours-cumul">
+                            <span class="jours-cumul-nombre">10</span>
+                            <div><span>Jours cumulés</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-container">
+                    <!-- Formulaire -->
+                    <div class="col-md-12">
+                        <h3>Nouvelle demande</h3>
+                        <div class="row">
+                            <div class="col-md-7 basic-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="i-du">Du :</label>
+                                        <input id="i-du" type="text">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="i-au">Au :</label>
+                                        <input id="i-au" type="text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="i-nature">Nature :</label>
+                                        <input id="i-nature" type="radio" value="RTT"> RTT
+                                        <input id="i-nature" type="radio" value="Congés Annuels"> Congés Annuels
+                                        <input id="i-nature" type="radio" value="Maladie"> Maladie
+                                        <input id="i-nature" type="radio" value="Autre"> Autres
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="i-descr">Description</label>
+                                        <input type="text">                             
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 detail-form">
+                                <div>
+                                    <h6>Je pars le :</h6>
+                                    <div>
+                                        <input type="radio">Matin <input type="radio"> Après-Midi
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6>Je reviens le :</h6>
+                                    <div>
+                                        <input type="radio">Matin <input type="radio"> Après-Midi
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1 submit-form">
+                                <button>Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Historique -->
+                    <div class="col-md-12">
+                        <h3>Historique</h3>
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <theader>
+                                    <tr>
+                                        <td>Début</td>
+                                        <td>Fin</td>
+                                        <td>Status</td>
+                                    </tr>
+                                </theader>
+                                <tbody>
+                                    <tr>
+                                        <td>10/10/2016</td>
+                                        <td>10/12/2016</td>
+                                        <td>Accepté</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/10/2016</td>
+                                        <td>10/12/2016</td>
+                                        <td>Accepté</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/10/2016</td>
+                                        <td>10/12/2016</td>
+                                        <td>Accepté</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -54,3 +54,66 @@
 // Utility classes
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+
+/*  custom */
+
+body{
+    .conges-header{
+
+        h1{
+            margin: 0; 
+            padding: 0;
+        }
+        
+    }
+
+    .conges-menu{
+        ul{
+            list-style: none;
+            margin: 0; 
+            padding: 0;
+            li{
+                padding: 10px; 
+            }
+        }
+    }
+
+    .conges-body{
+        .form-container{
+            .basic-form, .detail-form, .submit-form{
+                background-color: #EBEBEB;
+                height: 200px;
+            }
+            .basic-form{
+            }
+
+            .detail-form{
+            }
+
+            .submit-form{
+            }
+        }
+
+        .recap-container{
+            .jours-restants, .jours-maladie, .jours-cumul{
+                text-align: center;
+                padding-bottom: 20px;
+                &>span{
+                    font-size: 100px;
+                }
+            }
+            .jours-restants{
+                border: 1px solid #B0B900;
+            }
+
+            .jours-maladie{
+                border: 1px solid #FF0000;
+            }
+
+            .jours-cumul{
+                border: 1px solid #2F00FF;
+            }
+        }
+    }
+}
